@@ -4,4 +4,4 @@
 
 num = input("Введите число: ")
 
-print(eval(f"{num} + {num + num} + {num + num + num}"))
+print(int(num) + int(num + num) + int(num + num + num))
