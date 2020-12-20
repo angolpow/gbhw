@@ -1,0 +1,12 @@
+
+# Default ignored files
+venv
+.env
+.idea
+build
+dist
+bin
+.buildozer
+err.log
+templates
+tmp
