@@ -8,4 +8,4 @@ hours = inp_time // 3600
 minutes = (inp_time % 3600) // 60
 seconds = inp_time % 60
 
-print(f"{hours}:{minutes}:{seconds}")
+print(f"{hours:02}:{minutes:02}:{seconds:02}")
