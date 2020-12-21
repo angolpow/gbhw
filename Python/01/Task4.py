@@ -8,5 +8,5 @@ result = 0
 while num % 10 > 0:
     result = result if num % 10 <= result else num % 10
     num //= 10
-else:
-    print(result)
+
+print(result)
