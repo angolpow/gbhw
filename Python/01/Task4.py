@@ -5,7 +5,7 @@
 num = int(input("Введите число: "))
 result = 0
 
-while num % 10 > 0:
+while num:
     result = result if num % 10 <= result else num % 10
     num //= 10
 
