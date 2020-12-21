@@ -19,4 +19,5 @@ else:
 
 if profit:
     size = int(input("Введите численность: "))
-    print(profit / size)
+    print("Рентабельность: ", round(profit / costs, 2))
+    print("Прибыль на одного сотрудника: ", round(profit / size, 2))
