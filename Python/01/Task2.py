@@ -4,7 +4,7 @@
 
 inp_time = int(input("Введите время в секундах: "))
 
-hours = (inp_time // 3600)
+hours = inp_time // 3600
 minutes = (inp_time % 3600) // 60
 seconds = inp_time % 60
 
