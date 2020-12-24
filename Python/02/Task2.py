@@ -3,7 +3,8 @@
 # Для заполнения списка элементов необходимо использовать функцию input().
 
 
-elements = [x for x in input("Введите список элементов через запятую: ").split(",")]
+elements = [int(x.strip()) if x.strip().isdigit()
+            else x.strip() for x in input("Введите список элементов через запятую: ").split(",")]
 new_elements = []
 elements_length = len(elements) if len(elements) % 2 == 0 else len(elements) - 1
 

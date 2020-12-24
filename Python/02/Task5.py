@@ -5,6 +5,7 @@
 
 rates = [9, 6, 5, 5, 2, 1]
 
+print(f"Текущие рейтинги: {', '.join(map(str, rates))}")
 while True:
     new_rate = int(input("Введите новый результат, -1 для выхода: "))
     if new_rate == -1:
@@ -13,4 +14,3 @@ while True:
         rates.append(new_rate)
         rates.sort(reverse=True)
         print(f"Текущие рейтинги: {', '.join(map(str, rates))}")
-

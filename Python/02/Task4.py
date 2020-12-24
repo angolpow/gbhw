@@ -5,4 +5,3 @@ message = input("Введите строку с пробелами: ")
 
 for number, word in enumerate(message.split()):
     print(f"{number + 1}. {word[:10]}")
-
