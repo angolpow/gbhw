@@ -10,3 +10,4 @@ bin
 err.log
 templates
 tmp
+*/*.cfg
