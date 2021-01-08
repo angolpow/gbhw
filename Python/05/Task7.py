@@ -16,3 +16,33 @@
 
 Подсказка: использовать менеджер контекста.
 """
+
+
+import json
+
+
+def read_data(filename):
+    with open(filename, 'r', encoding="utf-8") as f:
+        average_profit = 0
+        counter = 0
+        profit_list = [{}, {}]
+        for line in f:
+            firm, _, receipts, costs = line.split()
+            profit = float(receipts) - float(costs)
+            if profit > 0:
+                average_profit += profit
+                counter += 1
+            profit_list[0][firm] = profit
+        try:
+            profit_list[1]['average_profit'] = round(average_profit / counter, 2)
+        except ZeroDivisionError:
+            profit_list[1]['average_profit'] = 0
+    return profit_list
+
+
+def write_data_to_json(filename, jsonfile):
+    with open(jsonfile, 'w', encoding="utf-8") as f:
+        json.dump(read_data(filename), f)
+
+
+write_data_to_json('t7', 't7.json')
