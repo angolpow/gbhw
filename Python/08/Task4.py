@@ -11,3 +11,44 @@
 Подсказка: постарайтесь по возможности реализовать в проекте «Склад оргтехники» максимум возможностей,
 изученных на уроках по ООП.
 """
+
+
+class Warehouse:
+    def __init__(self):
+        self.__storage = {}
+
+    # TODO: сделать геттеры/сеттеры
+    def add_item(self, item):
+        pass
+
+    def pass_item_to_dep(self, item):
+        pass
+
+
+class OfficeEquipment:
+    def __init__(self, model, price, demy, page_in_min):
+        self.model = model
+        self.page_in_min = page_in_min
+        self.price = price
+        self.demy = demy
+
+
+class Printer(OfficeEquipment):
+    def __init__(self, model, price, demy, page_in_min, is_color: bool, is_double_sided: bool):
+        self.is_color = is_color
+        self.is_double_sided = is_double_sided
+        super().__init__(model, price, demy, page_in_min)
+
+
+class Scanner(OfficeEquipment):
+    def __init__(self, model, price, demy, page_in_min, dpi):
+        self.dpi = dpi
+        super().__init__(model, price, demy, page_in_min)
+
+
+class Xerox(OfficeEquipment):
+    def __init__(self, model, price, demy, page_in_min, is_double_sided: bool):
+        self.is_double_sided = is_double_sided
+        super().__init__(model, price, demy, page_in_min)
+
+
